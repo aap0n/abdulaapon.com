@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Abdul J. Aapon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        .about-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .about-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-header {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #64B5F6, #E91E63);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #64B5F6;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(100, 181, 246, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            color: #64B5F6;
+        }
+
+        .text-section {
+            background: rgba(128, 128, 128, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .text-section:hover {
+            background: rgba(128, 128, 128, 0.15);
+        }
+
+        .text-section h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .text-section p {
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+            font-size: 2.2rem;
+        }
+
+        .leadership-box, .diverse-experience {
+            background-color: rgb(243, 244, 246);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .leadership-content, .diverse-content {
+            flex: 1;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: rgb(55, 65, 81);
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
+        h2.leadership-title, h2.diverse-title {
+            color: rgb(17, 24, 39);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .journey-image, .lesson-image {
+            width: 45%;
+            height: auto;
+            object-fit: cover;
+            max-height: 300px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <a href="index.html" class="name-link"><h1 class="name">Abdul J. Aapon</h1></a>
+        <div class="contact-dropdown">
+            <div class="contact-icon">
+                <i class="fas fa-user"></i>
+                <span class="arrow">▼</span>
+            </div>
+            <ul class="contact-menu">
+                <li><a href="mailto:abdul.aapon@gmail.com"><span>abdul.aapon@gmail.com</span><i class="fas fa-envelope"></i></a></li>
+                <li><a href="tel:+18197437649"><span>(819)-743-7649</span><i class="fas fa-phone"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/abdul-aapon-051a92210/" target="_blank"><span>LinkedIn</span><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-section" style="background: rgba(128, 128, 128, 0.2);">
+                        <h3><strong>Professional Journey</strong></h3>
+                        <p>From the start of my career, I've been passionate about solving problems, being creative, and connecting with people. Whether I was reorganizing inventory systems to make things run smoother or stepping up to lead my fraternity as President, I love challenges that need both creative and logical thinking. My journey hasn't been straightforward, but these varied experiences have given me a flexible set of skills that can adapt to any situation.</p>
+                    </div>
+
+                    <div class="leadership-box">
+                        <img src="group.jpg" alt="Group photo" class="journey-image">
+                        <div class="leadership-content">
+                            <h3>Leadership & Mentoring</h3>
+                            <p>Leadership and mentoring are really important to me. As Academic Coordinator, New Member Educator, and eventually President of my fraternity, I had the chance to help others reach their goals. I designed academic programs, set up structured learning, and united a diverse group of people under common goals. These roles reinforced my belief in the power of working together and the positive impact we can make as a team.</p>
+                        </div>
+                    </div>
+
+                    <div class="diverse-experience">
+                        <div class="diverse-content">
+                            <h3>Diverse Experience</h3>
+                            <p>I've worn many different hats—office administrator, barback, cook, sales representative, and more. In one job, I created an efficient workflow in just one day to handle large orders, which taught me the value of taking initiative and managing tasks well. Working in hospitality showed me how important teamwork and attention to detail are in giving customers a great experience. Exceeding sales targets for a humanitarian organization and securing donations during a charity drive helped me improve my communication skills and connect with people on a deeper level.</p>
+                        </div>
+                        <img src="lesson.jpg" alt="Teaching lesson" class="lesson-image">
+                    </div>
+
+                    <div class="text-section">
+                        <h3>Creative Pursuits & Future Goals</h3>
+                        <p>Creativity has always been a big part of my life. From DJing and making media to designing furniture and creating art, I enjoy blending style with function. I have a strong sense for design and love projects that let me think outside the box. I'm also passionate about science fields like physics and mathematics, and I'm always looking to learn more. As I work on improving my French to thrive in bilingual environments, I'm excited about the future and eager to contribute in roles where I can make a real difference.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

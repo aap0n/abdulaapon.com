@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Abdul J. Aapon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <a href="index.html" class="name-link"><h1 class="name">Abdul J. Aapon</h1></a>
+        <div class="contact-dropdown">
+            <div class="contact-icon">
+                <i class="fas fa-user"></i>
+                <span class="arrow">▼</span>
+            </div>
+            <ul class="contact-menu">
+                <li><a href="mailto:abdul.aapon@gmail.com"><span>abdul.aapon@gmail.com</span><i class="fas fa-envelope"></i></a></li>
+                <li><a href="tel:+18197437649"><span>(819)-743-7649</span><i class="fas fa-phone"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/abdul-aapon-051a92210/" target="_blank"><span>LinkedIn</span><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="has-submenu">
+                <a href="#" class="project-toggle">Projects <span class="arrow">▼</span></a>
+                <ul class="submenu">
+                    <li><a href="notionworks.html">NotionWorks</a></li>
+                    <li><a href="mapping.html">Interactive Demographic Mapping</a></li>
+                    <li><a href="finance-tool.html">Personal Finance Projection Tool</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section class="projects-grid">
+            <a href="notionworks.html" class="project-card">
+                <div class="project-card-content">
+                    <h3>NotionWorks</h3>
+                    <p>Educating people on Notion's tools and developing systems solutions for clients. Optimizing workflow and productivity through customized workspace solutions.</p>
+                    <div class="tags">
+                        <span class="tag">Notion</span>
+                        <span class="tag">Productivity</span>
+                        <span class="tag">Systems</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="mapping.html" class="project-card">
+                <div class="project-card-content">
+                    <h3>Interactive Demographic Mapping</h3>
+                    <p>A comprehensive election mapping project analyzing constituency data using AI implementation and geographical mapping to track engagement and voter favorability.</p>
+                    <div class="tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Mapping</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="finance-tool.html" class="project-card">
+                <div class="project-card-content">
+                    <h3>Personal Finance Projection Tool</h3>
+                    <p>A tool for financial planning and projection, helping users understand and plan their financial future through data-driven insights.</p>
+                    <div class="tags">
+                        <span class="tag">Finance</span>
+                        <span class="tag">Planning</span>
+                        <span class="tag">Analytics</span>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </main>
+</body>
+</html>
