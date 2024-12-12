@@ -1,8 +1,14 @@
 :root {
     --header-height: 60px;
     --sidebar-width: 250px;
-    --primary-color: #333;
+    --primary-color: #1a1a1a;
     --secondary-color: #2c2c2c;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-elevated: #242424;
+    --accent-color: #4a9eff;
     --animation-speed: 0.2s;
     --animation-curve: cubic-bezier(0.4, 0, 0.2, 1);
     --main-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -18,11 +24,14 @@ body {
     font-family: var(--main-font);
     font-weight: 300;
     overflow-x: hidden;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--main-font);
     font-weight: 300;
+    color: var(--text-primary);
 }
 
 /* Header Styles */
@@ -32,8 +41,8 @@ header {
     left: 0;
     right: 0;
     height: var(--header-height);
-    background: linear-gradient(90deg, #1a1a1a 0%, #0a0a0a 100%);
-    color: white;
+    background: linear-gradient(90deg, var(--primary-color) 0%, #000000 100%);
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     padding: 0 2rem;
@@ -44,7 +53,9 @@ header {
     cursor: pointer;
     padding: 0.5rem;
     z-index: 1001;
-    margin-right: auto;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .hamburger-icon {
@@ -81,7 +92,7 @@ header {
 .name-link {
     text-decoration: none;
     color: inherit;
-    margin-right: 2rem;
+    margin-right: auto;
 }
 
 .name {
@@ -104,7 +115,8 @@ header {
     left: 0;
     width: var(--sidebar-width);
     height: calc(100vh - var(--header-height));
-    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    background: var(--bg-secondary);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     padding: 0;
     z-index: 100;
@@ -166,15 +178,17 @@ body.sidebar-open .content {
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: all var(--animation-speed) var(--animation-curve);
-    background: transparent;
+    background: var(--bg-elevated);
     font-size: 0.95rem;
     letter-spacing: 0.5px;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .button:hover {
-    background: #333;
-    color: white;
-    border-color: #333;
+    background: var(--accent-color);
+    color: var(--text-primary);
+    border-color: var(--accent-color);
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -195,6 +209,7 @@ body.sidebar-open .content {
 .content {
     margin-left: 0;
     transition: margin-left var(--animation-speed) var(--animation-curve);
+    background-color: var(--bg-primary);
 }
 
 /* Main Content */
@@ -246,7 +261,7 @@ body.sidebar-open .content {
     font-weight: 500;
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .hero-text p {
@@ -255,7 +270,7 @@ body.sidebar-open .content {
     font-size: 1.1rem;
     margin-bottom: 1rem;
     line-height: 1.6;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Projects Page Styles */
@@ -270,7 +285,7 @@ body.sidebar-open .content {
 }
 
 .project-card {
-    background: #fff;
+    background: var(--bg-elevated);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     overflow: hidden;
@@ -278,11 +293,12 @@ body.sidebar-open .content {
     text-decoration: none;
     color: inherit;
     display: block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .project-card-content {
@@ -290,13 +306,13 @@ body.sidebar-open .content {
 }
 
 .project-card h3 {
-    color: #333;
+    color: var(--text-primary);
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
 
 .project-card p {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1rem;
@@ -310,11 +326,11 @@ body.sidebar-open .content {
 }
 
 .project-card .tag {
-    background: #f0f0f0;
+    background: var(--bg-elevated);
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-secondary);
 }
 
 /* About Page Styles */
@@ -330,7 +346,7 @@ body.sidebar-open .content {
 }
 
 .about-text h3 {
-    color: #333;
+    color: var(--text-primary);
     margin: 1.5rem 0 1rem 0;
 }
 
@@ -349,7 +365,7 @@ body.sidebar-open .content {
 
 .skill-category h4 {
     margin-bottom: 1rem;
-    color: #444;
+    color: var(--text-primary);
 }
 
 .skill-category ul {
@@ -367,7 +383,7 @@ body.sidebar-open .content {
     content: "•";
     position: absolute;
     left: 0;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Contact Dropdown Styles */
@@ -410,7 +426,7 @@ body.sidebar-open .content {
     position: absolute;
     top: 100%;
     right: 0;
-    background: linear-gradient(180deg, rgba(40, 40, 40, 0.95), rgba(28, 28, 28, 0.95));
+    background: var(--bg-elevated);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 4px;
@@ -422,6 +438,7 @@ body.sidebar-open .content {
     transform: translateY(10px);
     transition: all var(--animation-speed) var(--animation-curve);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-dropdown:hover .contact-menu {
@@ -444,14 +461,14 @@ body.sidebar-open .content {
     align-items: center;
     justify-content: space-between;
     padding: 0.7rem 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: all var(--animation-speed) var(--animation-curve);
 }
 
 .contact-menu a:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: var(--text-primary);
 }
 
 .contact-menu a span {
@@ -488,13 +505,13 @@ body.sidebar-open .content {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .contact-text p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 3rem;
 }
 
@@ -548,30 +565,30 @@ body.sidebar-open .content {
 
 .contact-item i {
     font-size: 1.5rem;
-    color: #666;
+    color: var(--text-secondary);
     transition: all var(--animation-speed) var(--animation-curve);
 }
 
 .contact-item:hover i {
-    color: #333;
+    color: var(--text-primary);
 }
 
 .contact-details h3 {
     font-size: 1.2rem;
-    color: #333;
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
     font-weight: normal;
 }
 
 .contact-details a {
-    color: #666;
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 1.1rem;
     transition: all var(--animation-speed) var(--animation-curve);
 }
 
 .contact-details a:hover {
-    color: #333;
+    color: var(--text-primary);
 }
 
 /* Responsive Design */
