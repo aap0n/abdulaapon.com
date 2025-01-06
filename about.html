@@ -126,6 +126,17 @@
                 padding: 1.5rem;
             }
         }
+
+        @media screen and (max-width: 768px) {
+            .professional-journey-content {
+                flex-direction: column;
+                align-items: center !important;
+            }
+            .professional-journey-content img {
+                order: -1;
+                margin-bottom: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -160,7 +171,7 @@
                 <div class="about-text">
                     <div class="text-section" style="background: var(--bg-secondary);">
                         <h3><strong>Professional Journey</strong></h3>
-                        <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                        <div class="professional-journey-content" style="display: flex; gap: 2rem; align-items: flex-start;">
                             <div style="flex: 1; min-width: 0;">
                                 <p style="margin: 0;">From the start of my career, I've been passionate about solving problems, being creative, and connecting with people. Whether I was reorganizing inventory systems to make things run smoother or stepping up to lead my fraternity as President, I love challenges that need both creative and logical thinking. My journey hasn't been straightforward, but these varied experiences have given me a flexible set of skills that can adapt to any situation.</p>
                             </div>
