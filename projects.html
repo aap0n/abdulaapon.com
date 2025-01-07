@@ -6,6 +6,131 @@
     <title>Projects - Abdul J. Aapon</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem 2rem;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .project {
+            margin-bottom: 4rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .project-description {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-images {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 1rem auto;
+        }
+
+        /* Main interface image (left) */
+        .project-image.interface {
+            width: 650px;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        /* Moodboard image (right) */
+        .project-image.moodboard {
+            width: 450px;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        /* Default image size for other projects */
+        .project-image {
+            width: 500px;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        .collaboration-note {
+            font-style: italic;
+            margin: 2rem 0;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+
+        /* NotionWorks logo specific style */
+        .project-image.notion-logo {
+            width: 510px;
+            height: 510px;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+
+        .image-caption {
+            text-align: center;
+            margin-top: 1rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .image-caption a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .project-images {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .project-image,
+            .project-image.interface,
+            .project-image.moodboard {
+                width: 100%;
+                max-width: 400px;
+                height: 400px;
+            }
+        }
+
+        .project-description.right-align {
+            text-align: left;
+            margin-bottom: 0.5rem;
+        }
+
+        .visit-link {
+            text-align: left;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .visit-link a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .centered-logo {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -26,21 +151,54 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
     <main class="content">
-        <section class="projects-section">
-            <div class="projects-content" style="text-align: center; padding: 4rem 2rem;">
-                <h2 style="margin-bottom: 1.5rem; color: #333;">Projects</h2>
-                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                    Projects will be uploaded shortly. Stay tuned for a showcase of my latest work and contributions.
-                </p>
+        <h1 class="main-title">Projects</h1>
+        
+        <div class="project">
+            <h2 class="project-title">Roland 303-Inspired Synthesizer</h2>
+            <p class="project-description">
+                Currently collaborating with musician, DJ, and producer Justus Walker on developing a custom synthesizer inspired by the iconic Roland 303. The project combines digital design and electronic music innovation, utilizing tools like Figma for interface design and Fusion 360 for hardware modeling. While still in the pre-production phase, we are focused on perfecting the internal logic and design architecture before moving into physical testing and prototyping. This synthesizer project represents a fusion of classic analog sound design with modern engineering approaches.
+            </p>
+            <p class="collaboration-note">
+                If you have skills that could contribute to this project or are interested in collaborating, please feel free to reach out. We welcome expertise in electronics, sound design, hardware prototyping, or any related fields.
+            </p>
+            <div class="project-images">
+                <img src="303figma.png" alt="Synthesizer Interface Design" class="project-image interface">
+                <img src="303figma2.png" alt="Synthesizer Interface Design Alternative View" class="project-image moodboard">
             </div>
-        </section>
+        </div>
+
+        <div class="project">
+            <h2 class="project-title">NotionWorks</h2>
+            <p class="project-description right-align">
+                NotionWorks strives to help and educate people on Notion products and how they can be used to organize, automate, and maximize any part of your personal or professional life. Whether you're a professional, student, or hobbyist, Notion products can help you connect all the tools and services you use to do what you love—easier, simpler, and faster. I created this initiative to deepen my own understanding of Notion's professional applications while developing custom solutions for clients, combining personal learning with practical implementation.
+            </p>
+            <p class="visit-link">
+                Visit <a href="https://notionworks.org" target="_blank">notionworks.org</a> to learn more about the project
+            </p>
+            <div class="centered-logo">
+                <a href="https://notionworks.org" target="_blank">
+                    <img src="NotionWorks.png" alt="NotionWorks Logo" class="project-image notion-logo">
+                </a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h2 class="project-title">Personal Website & Client Portal</h2>
+            <p class="project-description">
+                Built my personal portfolio website from scratch using Cursor IDE and Claude Sonnet 3.5 LLM, creating a clean, minimal design that effectively showcases my work. The development process combined AI-assisted coding with custom design decisions to create a unique and professional web presence. The site is hosted on GitHub Pages for reliable deployment and version control. For client management, I integrated a Softr-based client portal and use Notion as an internal database to track and manage client projects efficiently.
+            </p>
+            <div class="project-images">
+                <img src="cursor.png" alt="Cursor IDE Development" class="project-image">
+                <img src="softr.png" alt="Softr Client Portal" class="project-image">
+            </div>
+        </div>
     </main>
 
     <script src="script.js"></script>
